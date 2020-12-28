@@ -1,0 +1,27 @@
+﻿<Window x:Class="Cell_automat_project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cell_automat_project"
+        mc:Ignorable="d"
+        Title="Cell Automat" Height="840" Width="800" WindowStyle="ThreeDBorderWindow" Loaded="Invite" HorizontalAlignment="Center">
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="20*" />
+        </Grid.RowDefinitions>
+        <ComboBox Name="combobox1" Width="180" Height="25" HorizontalAlignment="Left" Margin="20 0 0 0" SelectionChanged="combobox1_selected">
+            <ComboBoxItem>Jedi</ComboBoxItem>
+            <ComboBoxItem>Droid</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="clearbutton" Background="LightGray" Width="80" Height="20" HorizontalAlignment="Center" Margin="0 0 20 0" Click="clear_click">
+            <TextBlock HorizontalAlignment="Center">Clear</TextBlock>
+        </Button>
+        
+        <Button x:Name="startbutton" Background="LightGray" Width="180" Height="20" HorizontalAlignment="Right" Margin="0 0 20 0" Click="start_click">
+            <TextBlock HorizontalAlignment="Center">Next step</TextBlock>
+        </Button>
+        <Canvas x:Name="canvas" Grid.Row="1" Background="Chartreuse" MouseLeftButtonUp="Placing" MouseRightButtonUp="Removing"/>
+    </Grid>
+</Window>
